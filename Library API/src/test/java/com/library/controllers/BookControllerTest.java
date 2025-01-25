@@ -46,6 +46,6 @@ public class BookControllerTest {
 	            .contentType(MediaType.APPLICATION_JSON))
 	            .andExpect(status().isOk())
 	            .andExpect(jsonPath("$", hasSize(2)))
-	            .andExpect(jsonPath("$[1].title", is("The times")));
+	            .andExpect(jsonPath("$[0].title", is("The times")));
 	}
 }
